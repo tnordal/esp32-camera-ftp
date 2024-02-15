@@ -3,3 +3,4 @@
 [![Framework Badge Arduino](https://img.shields.io/badge/framework-arduino-00979C.svg)](https://arduino.cc)
 
 Simple program that lets you upload an image from ESP32-camera module to FTP server at defined interval.
+This is a fork from pilotak
