@@ -3,8 +3,8 @@
 #include "img_converters.h"
 
 #include "fb_gfx.h"
-#include "fd_forward.h"
-#include "fr_forward.h"
+// #include "fd_forward.h"
+// #include "fr_forward.h"
 
 unsigned long send_timer = 0;
 bool cam_init_ok = false;
@@ -25,8 +25,8 @@ bool cameraInit() {
     config.pin_pclk     = 22;
     config.pin_vsync    = 25;
     config.pin_href     = 23;
-    config.pin_sscb_sda = 26;
-    config.pin_sscb_scl = 27;
+    config.pin_sccb_sda = 26;
+    config.pin_sccb_scl = 27;
     config.pin_pwdn     = 32;
     config.pin_reset    = -1;
     config.xclk_freq_hz = 20000000;
