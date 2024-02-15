@@ -2,6 +2,7 @@
 #include "esp_timer.h"
 #include "img_converters.h"
 
+
 #include "fb_gfx.h"
 // #include "fd_forward.h"
 // #include "fr_forward.h"
@@ -57,11 +58,7 @@ bool cameraInit() {
 bool takePicture() {
     DBG("Taking picture now");
     camera_fb_t *fb = NULL;
-    digitalWrite(4, HIGH);
-    delay(100);
     fb = esp_camera_fb_get();
-    delay(100);
-    digitalWrite(4, LOW);
 
     if (!fb) {
         DBG("Camera capture failed");
