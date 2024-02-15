@@ -47,8 +47,8 @@ bool cameraInit() {
     }
 
     sensor_t *s = esp_camera_sensor_get();
-    s->set_vflip(s, true);
-    s->set_hmirror(s, true);
+    s->set_vflip(s, false);
+    s->set_hmirror(s, false);
 
     DBG("CAM init ok");
     return true;
