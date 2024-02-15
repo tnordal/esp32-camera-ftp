@@ -57,7 +57,11 @@ bool cameraInit() {
 bool takePicture() {
     DBG("Taking picture now");
     camera_fb_t *fb = NULL;
+    digitalWrite(4, HIGH);
+    delay(100);
     fb = esp_camera_fb_get();
+    delay(100);
+    digitalWrite(4, LOW);
 
     if (!fb) {
         DBG("Camera capture failed");
