@@ -55,7 +55,7 @@ bool cameraInit() {
     return true;
 }
 
-bool takePicture() {
+bool takePicture(String fileName) {
     DBG("Taking picture now");
     camera_fb_t *fb = NULL;
     fb = esp_camera_fb_get();
@@ -66,7 +66,7 @@ bool takePicture() {
     }
 
     DBG("Camera capture success");
-    uploadFile(fb->buf, fb->len, FILE_NAME);
+    uploadFile(fb->buf, fb->len, fileName.c_str());
 
     esp_camera_fb_return(fb);
 
